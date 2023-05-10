@@ -1,0 +1,69 @@
+patient can only access their own data (done)
+
+EHR companies can access data of any patient (done)
+
+when someone tries to change the data, send email notification to admin (done)
+
+create demo tables for patinet and EHR companies (done)
+
+audit records/logs to be maintained for each query on patient table (done)
+An audit record should include the following:
+• Date and time of logged event
+• Patient ID whose record was accessed
+• User ID who performed the logged event
+• Action type (create, delete, change, query, print, or copy) 
+
+
+## log_id, user_id, user_name, action_type, table_affected in EHR system, timestamp, notes
+
+## only encrypt data while storing
+## signature of encryptyed data will be stored
+
+
+## user_credentials.json
+[user_id, name, user_name, password, company_login]
+
+## log data is encrypted
+## signature is for the encrypted data
+## signature is not encrypted
+
+## password is user is hashed and then everything is normally encrypted
+
+## user list
+anish, anish (normal user) 1
+admin, admin (admin user) 2
+ankita, 2532 (normal user) 3
+rohan, 1234 (normal user) 4
+supriya_patil, India (normal user) 5
+hospital_nirma, admin (admin user) 6
+ehr_admin, admins (admin user) 7
+akshay_kumar, hello (normal user) 8
+john_cena, wwe (normal user) 9 
+us_govt, us@admin (admin user) 10
+demo_test, 1234 (normal user) 11
+usc_health, 1234 (admin user) 12
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## private key will be with server
+## client will have public key to verify
+
+## client will send data to server and then server will create the signature and store it with the data
